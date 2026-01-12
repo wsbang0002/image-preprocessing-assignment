@@ -18,3 +18,6 @@ Hugging Face `ethz/food101` 데이터셋에서 이미지를 불러와 AI 학습�
 pip install opencv-python numpy pillow datasets
 python image_preprocessing.py
 
+
+## Pull Request log
+- Created PR for code review and merge practice.
