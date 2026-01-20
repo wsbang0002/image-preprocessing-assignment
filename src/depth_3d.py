@@ -86,7 +86,6 @@ def run_demo(sample_path="sample/sample.jpg", out_dir="outputs", show=False):
     cv2.imwrite(os.path.join(out_dir, "depth_map.png"), depth_map)
     save_ply(points_n3, os.path.join(out_dir, "point_cloud.ply"))
 
-    # VM은 show=False 권장 (GUI 없는 경우가 많음)
     if show:
         cv2.imshow("Original Image", image)
         cv2.imshow("Depth Map", depth_map)
