@@ -34,7 +34,7 @@ def generate_point_cloud_hw3(image):
     h, w = gray.shape[:2]
 
     X, Y = np.meshgrid(np.arange(w), np.arange(h))
-    Z = gray.astype(np.float32)  # ✅ 사진 강조: Z는 float32
+    Z = gray.astype(np.float32)  
 
     points_hw3 = np.dstack((X, Y, Z)).astype(np.float32)  # (H,W,3)
     return points_hw3
@@ -48,7 +48,6 @@ def flatten_points(points_hw3):
     return points_hw3.reshape(-1, 3).astype(np.float32)
 
 def save_ply(points_n3, filepath):
-    # (N,3) ASCII PLY 저장 (Open3D 없이)
     if not isinstance(points_n3, np.ndarray):
         raise TypeError("points_n3는 numpy.ndarray 여야 합니다.")
     if points_n3.ndim != 2 or points_n3.shape[1] != 3:
