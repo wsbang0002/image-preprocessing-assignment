@@ -1,4 +1,22 @@
+# Python / venv
 .venv/
 __pycache__/
 *.pyc
+
+# OS / editor
 .DS_Store
+.vscode/
+
+# Datasets / archives
+datasets/
+*.zip
+
+# Weights / runs
+weights/
+runs/
+task3_data/
+task3_outputs/
+w3/
+
+# Ultralytics cache
+*.pt
